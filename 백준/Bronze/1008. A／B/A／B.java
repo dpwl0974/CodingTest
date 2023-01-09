@@ -6,8 +6,7 @@ public class Main {
 
         double a = sc.nextDouble();
         double b = sc.nextDouble();
-        double res = a/b;
-        System.out.println(res);
-    }
-    
+        
+        System.out.println(a/b);
+    }  
 }
