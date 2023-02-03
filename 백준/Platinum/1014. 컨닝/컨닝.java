@@ -32,7 +32,7 @@ public class Main {
 	}
 
 	static int getDP(int n, int m) {
-		if(m==M) return 0;
+		if(m==M) return 0; //모든 줄을 체크한 경우
 		if(dp[n][m] != -1) return dp[n][m];
 		int num = n;
 		
@@ -43,19 +43,19 @@ public class Main {
 			}
 		}
 
-		int res = getDP(0, m+1);
+		int res = getDP(0, m+1); //아무도 앉히지 않고 다음 줄로 넘어가는 경우
 		for(int i = 1; i < (1<<N); i++) {
-			if((i&num) > 0) continue;
+			if((i&num) > 0) continue; //나올 수 없는 경우의 수 제외
 			int count = 0;
 			boolean isAvail = true;
 
 			for(int j = 0; j < N && isAvail; j++) {
-				if((i & (1<<j)) > 0) {
+				if((i & (1<<j)) > 0) { //해당 자리에 학생이 앉아있는 경우
 					count++;
-					if (visited[j][m]) isAvail = false;
+					if (visited[j][m]) isAvail = false; //장애물이 있을 시 = 나올 수 없는 경우의 수
 				}
 			}
-			if(!isAvail) continue;
+			if(!isAvail) continue; //
 			res = Math.max(res, getDP(i, m+1) + count);
 		}
 		return dp[n][m] = res;
