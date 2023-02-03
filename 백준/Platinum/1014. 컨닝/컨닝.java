@@ -15,7 +15,7 @@ public class Main {
 			dp = new int[1<<N][M];
 
 			for(int j = 0; j < (1<<N); j++) {
-				Arrays.fill(dp[j], -1);
+				Arrays.fill(dp[j], -1); //-1로 배열 초화화
 			}
 
 			visited = new boolean[N][M];
