@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Main {
-	static int dp[][];
-	static boolean visited[][];
+	static int dp[][]; //자리
+	static boolean visited[][]; //컨닝 가능한 자리
 	static int N,M;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
