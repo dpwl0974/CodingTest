@@ -1,2 +1,2 @@
-# Baekjoon
-Baekjoon 문제 풀이입니다.
+# CodingTest
+Baekjoon / Programmers 문제 풀이입니다.
