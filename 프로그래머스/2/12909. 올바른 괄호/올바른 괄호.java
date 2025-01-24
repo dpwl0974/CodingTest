@@ -9,10 +9,11 @@ class Solution {
             }
             else if(s.charAt(i) == ')') {
                 cnt -= 1;
-                if(cnt < 0) {
+            } 
+            
+            if(cnt < 0) {
                     break;
                 }
-            }   
         }
         
         if(cnt != 0) {
