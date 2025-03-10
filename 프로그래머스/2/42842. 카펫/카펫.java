@@ -11,7 +11,7 @@ class Solution {
                 if(w*2 + ((h-2) * 2) == brown) {
                     answer[0] = w;
                     answer[1] = h;
-                    return answer;
+                    break;
                 }
             } 
         }
