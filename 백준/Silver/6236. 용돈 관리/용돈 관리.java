@@ -2,39 +2,44 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(in.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+    public static void main(String[] ars) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] money = new int[N];
+        //날짜
+        int n = Integer.parseInt(st.nextToken());
+        //인출 횟수
+        int m = Integer.parseInt(st.nextToken());
+
+        //투 포인터 적용
         int min = 1, max = 1;
+        int[] arr = new int[n];
 
-        for(int i=0;i<N;i++) {
-            money[i] = Integer.parseInt(in.readLine());
-            min = Math.max(min,money[i]);
-            max += money[i];
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+            min = Math.max(min, arr[i]);
+            max += arr[i];
         }
 
-        int mid, count, sum;
-        while(min<=max){
-            mid = (min+max)/2;
+        //인출 횟수 카운트  //필요한 돈 (sum)
+        int cnt, money, mid;
 
-            sum = 0;
-            count = 1;
+        while(min <= max) {
+            mid  = (min + max) / 2;
+            money = 0;
+            cnt = 1;
 
-            for(int i=0;i<N;i++){
-                sum += money[i];
-                if(sum>mid) {
-                    sum = money[i];
-                    count++;
+            for (int i = 0; i < n; i++) {
+                money += arr[i];
+                if (money > mid) {
+                    cnt++;
+                    money = arr[i];
                 }
             }
-            if(count>M) min = mid+1;
-            else max = mid-1;
-        }
 
+            if(cnt > m) min = mid + 1;
+            else max = mid - 1;
+        }
         System.out.println(min);
     }
 }
