@@ -1,19 +1,16 @@
 class Solution {
     public String solution(String s) {
         String answer = "";
-        String [] arr = s.split(" ");
+        String[] arr = s.split(" ");
         
-        int min = Integer.parseInt(arr[0]);
-        int max = min;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         
-        for(int i = 1; i < arr.length; i++){
-            int temp = Integer.parseInt(arr[i]);
-            min = Math.min(min, temp);
-            max = Math.max(max, temp);
+        for(String a : arr){
+            int num = Integer.parseInt(a);
+            min = Math.min(min, num);
+            max = Math.max(max, num);
         }
-        
-        answer = min + " " + max;
-        
-        return answer;
+        return min + " " + max;
     }
 }

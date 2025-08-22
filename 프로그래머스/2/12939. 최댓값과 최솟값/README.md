@@ -1,10 +1,10 @@
 # [level 2] 최댓값과 최솟값 - 12939 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939) 
 
 ### 성능 요약
 
-메모리: 75.1 MB, 시간: 11.32 ms
+메모리: 81.3 MB, 시간: 13.64 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 01월 17일 16:55:37
+2025년 08월 22일 10:51:24
 
 ### 문제 설명
 
