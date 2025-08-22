@@ -4,6 +4,6 @@ class Solution {
         for(char c : String.valueOf(x).toCharArray()) {
             answer += c - '0';   // int형 변환
         }
-        return x % answer == 0 ? true : false;
+        return x % answer == 0;
     }
 }
