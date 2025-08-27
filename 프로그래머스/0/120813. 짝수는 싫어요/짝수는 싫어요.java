@@ -6,7 +6,6 @@ class Solution {
         for(int i = 1; i <= n; i++){
             if(i % 2 == 1) list.add(i);
         }
-        Collections.sort(list);
         
         return list.stream().mapToInt(x -> x).toArray();
     }
