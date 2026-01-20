@@ -7,7 +7,7 @@ class Solution {
         HashSet<Integer> set = new HashSet<Integer>();
         
         for(int i = 0; i < nums.length; i++){
-            if(!set.contains(nums[i])) set.add(nums[i]);
+            set.add(nums[i]);
         }
     
         return set.size() > n ? n : set.size();
