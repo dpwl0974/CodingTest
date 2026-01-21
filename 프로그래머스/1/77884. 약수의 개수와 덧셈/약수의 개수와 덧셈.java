@@ -3,9 +3,7 @@ class Solution {
         int answer = 0;
         
         for(int i = left; i <= right; i++){
-            int sqrt = (int) Math.sqrt(i);
-            
-            int count = divisor(i, sqrt);
+            int count = divisor(i);
             
             if(count % 2 == 0) answer += i;
             else answer -= i;
@@ -13,7 +11,8 @@ class Solution {
         return answer;
     }
     
-    public int divisor(int n, int sqrt){
+    public int divisor(int n){
+        int sqrt = (int) Math.sqrt(n);
         int count = 0;
         for(int i = 1; i <= sqrt; i++) {
             if(n % i == 0) {
